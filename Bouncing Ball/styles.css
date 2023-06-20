@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+#container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ball {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, white 10%, orange 80%);
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+}
+
+#streaks {
+    position: relative;
+}
+#streak1 {
+    position: absolute;
+    height: 200px;
+    width: 10px;
+    
+    border-left: 2px solid black;
+    left: 50%;
+}
+
+#streak2 {
+    position: absolute;
+    height: 168px;
+    width: 10px;
+    border-radius: 50%;
+    border-left: 2px solid black;
+    left: 20%;
+    top: 16px;
+}
+
+#streak3 {
+    position: absolute;
+    height: 168px;
+    width: 10px;
+    border-radius: 50%;
+    border-right: 2px solid black;
+    right: 20%;
+    top: 16px;
+}
+
+#shadow {
+    position: relative;
+    top: 50px;
+    height: 10px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(25%);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
